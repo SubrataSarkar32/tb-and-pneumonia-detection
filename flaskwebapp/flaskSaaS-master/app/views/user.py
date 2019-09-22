@@ -43,7 +43,7 @@ def signup():
         # Subject of the confirmation email
         subject = 'Please confirm your email address.'
         # Generate a random token
-        token = ts.dumps(user.email, salt='email-confirm-key')
+        token = ts.dumps(user.email, salt='salt')
         # Build a confirm link with token
         confirmUrl = url_for('userbp.confirm', token=token, _external=True)
         # Render an HTML template to send by email
@@ -60,7 +60,7 @@ def signup():
 @userbp.route('/confirm/<token>', methods=['GET', 'POST'])
 def confirm(token):
     try:
-        email = ts.loads(token, salt='email-confirm-key', max_age=86400)
+        email = ts.loads(token, salt='salt', max_age=86400)
     # The token can either expire or be invalid
     except:
         abort(404)
@@ -121,7 +121,7 @@ def forgot():
             # Subject of the confirmation email
             subject = 'Reset your password.'
             # Generate a random token
-            token = ts.dumps(user.email, salt='password-reset-key')
+            token = ts.dumps(user.email, salt='password-key')
             # Build a reset link with token
             resetUrl = url_for('userbp.reset', token=token, _external=True)
             # Render an HTML template to send by email
@@ -140,7 +140,7 @@ def forgot():
 @userbp.route('/reset/<token>', methods=['GET', 'POST'])
 def reset(token):
     try:
-        email = ts.loads(token, salt='password-reset-key', max_age=86400)
+        email = ts.loads(token, salt='password-key', max_age=86400)
     # The token can either expire or be invalid
     except:
         abort(404)
@@ -191,7 +191,7 @@ def payFail():
 	content = request.json
 	stripe_email = content['data']['object']['email']
 	user = models.User.query.filter_by(email=stripe_email).first()
-	if user is not None: 
+	if user is not None:
 		user.paid = 0
 		db.session.commit()
 		# do anything else, like execute shell command to disable user's service on your app
@@ -202,7 +202,7 @@ def paySuccess():
 	content = request.json
 	stripe_email = content['data']['object']['email']
 	user = models.User.query.filter_by(email=stripe_email).first()
-	if user is not None: 
+	if user is not None:
 		user.paid = 1
 		db.session.commit()
 		# do anything else on payment success, maybe send a thank you email or update more db fields?

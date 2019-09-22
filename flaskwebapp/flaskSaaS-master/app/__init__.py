@@ -13,7 +13,7 @@ from flask.ext.sqlalchemy import SQLAlchemy
 db = SQLAlchemy(app)
 
 # Setup the mail server
-from flask.ext.mail import Mail
+from flask_mail import Mail
 mail = Mail(app)
 
 # Setup the debug toolbar
