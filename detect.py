@@ -1,13 +1,22 @@
-import random,keras,cv2
-import os
+import pip
+def install():
+    if hasattr(pip, 'main'):
+        pip.main(['install', 'keras', 'tensorflow','opencv-python','numpy'])
+    else:
+        pip._internal.main(['install', 'keras', 'tensorflow','opencv-python','numpy'])
 
-from keras.preprocessing import image
-from keras.models import load_model
+try:
+    import random,keras,cv2
+    import os
 
-import numpy as np
-from keras.models import model_from_json
-import json
+    from keras.preprocessing import image
+    from keras.models import load_model
 
+    import numpy as np
+    from keras.models import model_from_json
+    import json
+except:
+    install()
 def give_prediction(filename=''):
             '''
             Call this function with a filename of an image to get predictions

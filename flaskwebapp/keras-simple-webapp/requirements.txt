@@ -1,0 +1,7 @@
+Flask == 0.11.1
+gunicorn
+keras
+numpy
+h5py
+Theano
+opencv-python

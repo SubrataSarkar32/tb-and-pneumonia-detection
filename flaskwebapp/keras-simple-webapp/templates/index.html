@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Pneutakecare : X-ray Image Classification using Convolutional Neural Networks</title>
+  <style>
+.footer {
+   position: fixed;
+   left: 0;
+   bottom: 0;
+   width: 100%;
+   background-color: black;
+   color: white;
+   text-align: right;
+}
+</style>
+
+
+      <link rel="stylesheet" href="{{ url_for('static',filename='style.css') }}">
+
+</head>
+
+<body>
+    {% with messages = get_flashed_messages(with_categories=true) %}
+		  	{% if messages %}
+		    	<ul>
+		    		{% for category, message in messages %}
+		      			<li class="ui {{ category }} message flash">{{ message }}</li>
+		    		{% endfor %}
+		    	</ul>
+		  	{% endif %}
+		{% endwith %}
+
+	<h1>X-ray Image Classification using <span>Convolutional Neural Networks</span></h1>
+
+	<div id="form" style="margin:50px; margin-top:80px;">
+
+    <form action = "https://subrata32.pythonanywhere.com/predictly" method = "POST"
+         enctype = "multipart/form-data">
+         <input type = "file" name = "file" />
+         <input type = "submit" value="Predict">
+      </form>
+
+	</div>
+
+	  <div id="debug" style="margin:65px; margin-top:100px;">
+
+
+		<!-- <input type="color" id="colors">
+		 <input type="number" id="lineWidth" style="width:60px" value="0.2" step="0.1" min="0.1"> -->
+		<!--input type="button" id="clearButton" value="Clear" style=""-->
+		<br/>
+		<span style="color: #4DAF7C; font-weight: 400; font-family: 'Open Sans', Helvetica;	">Select image to upload!</span>
+	</div>
+	<div class="footer">
+        <a href="https://subrata32.pythonanywhere.com">Home</a> | <a href="https://subrata32.pythonanywhere.com/about/">About</a> | <a href="https://subrata32.pythonanywhere.com/contact/">Contact</a>
+    </div>
+</body>
+</html>
