@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Pneutakecare</title>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.0/css/bulma.min.css">
+	<link href="https://afeld.github.io/emoji-css/emoji.css" rel="stylesheet">
+	<script defer src="https://use.fontawesome.com/releases/v5.0.7/js/all.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<style>
+        .hr {
+            display: block;
+            position: relative;
+            padding: 0;
+            margin: 8px auto;
+            height: 5px;
+            width: 100%;
+            max-height: 10px;
+            font-size: 5px;
+            line-height: 3;
+            clear: both;
+            border-top: 3px solid #000000;
+            border-bottom: 2px solid #000000;
+        }
+        
+		.buttonpay {
+			display: inline-block;
+			border-radius: 4px;
+			background-color: #4CAF50;
+			border: none;
+			color: #FFFFFF;
+			text-align: center;
+			font-size: 28px;
+			padding: 20px;
+			width: 200px;
+			transition: all 0.5s;
+			cursor: pointer;
+			margin: 5px;
+		}
+
+		.buttonpay span {
+			cursor: pointer;
+			display: inline-block;
+			position: relative;
+			transition: 0.5s;
+		}
+
+		.buttonpay span:after {
+			content: '\00bb';
+			position: absolute;
+			opacity: 0;
+			top: 0;
+			right: -20px;
+			transition: 0.5s;
+		}
+
+		.buttonpay:hover span {
+			padding-right: 25px;
+		}
+
+		.buttonpay:hover span:after {
+			opacity: 1;
+			right: 0;
+		}
+
+		.center {
+			display: block;
+			margin-left: auto;
+			margin-right: auto;
+			width: 50%;
+		}
+	</style>
+</head>
+
+<body>
+
+	<!-- Body Starts -->
+	<header class="navbar is-fixed-top has-background-light is-transparent">
+		<div class="container ">
+			<div class="navbar-brand">
+				<a class="navbar-item is-active" id="homeB">
+                    <img src="https://raw.githubusercontent.com/SubrataSarkar32/subratasarkar32.github.io/master/images/logo.png" alt="Logo">
+                    &nbsp PneuTakeCare
+
+				</a>
+				<span class="navbar-burger burger has-background-light" data-target="navbarMenuHeroC">
+					<span></span>
+					<span></span>
+					<span></span>
+				</span>
+			</div>
+			
+		</div>
+	</header>
+
+
+	<section id="home" class="hero is-fullheight has-background-white-ter">
+		<!-- Hero head: will stick at the top -->
+
+		<!-- Hero content: will be in the middle -->
+		<div class="hero-body has-background-white-ter">
+			<div class="container has-text-centered has-background-white-ter">
+				<div class="columns">
+					<div class="column is-half is-offset-one-quarter">
+						<br>
+						<h1 class="title has-text-black">
+							<strong id="hello" class="title is-2 has-text-black"></strong>
+							<i class="em em-pray"></i>
+						</h1>
+						<div></div>
+
+
+						<h1 class="content is-medium has-text-justified has-text-weight-light">
+                            The project <strong class="has-text-black">PneuTakeCare</strong>, is an initiative by Pratyusha Sinha and Subrata Sarkar to 
+                            make machine learning accessible to the every person. This model upon given the x-ray image of chest and tells whether the 
+                            person has pneumonia or tuberculosis or is normal. We have three options a destop app, an android app and a webapp.
+                            We hope people are benifitted using this machine learning model.
+                        </h1>
+                        
+                    </br>
+                    <strong>
+                    DISCLAIMER:
+                    THE APPS ARE IN ALPHA PHASE. YOU ARE STRICTLY ADVISED TO CONSULT A REAL DOCTOR REGARDLESS OF THE PREDICTION GIVEN BY
+                    THE APPS. WE ARE NOT RESPONSIBLE FOR ANY DAMAGE CAUSED BY THE USE OF THE APPS. YOU AGREE TO THIS CONDITION BY USING 
+                    ANY VERSION OF THE APPS.
+                    </strong>
+					</div>
+				</div>
+				<div class="columns is-centered">
+					<div class="column is-2">
+						<a class="button is-large is-primary is-outlined" href="https://github.com/SubrataSarkar32/tb-and-pneumonia-detection">
+                            <span class="icon is-medium">
+                              <i class="fas fa-laptop"></i>
+                            </span>
+                            <span>Desktop</span>
+                          </a>
+					</div>
+					<div class="column is-2">
+						<a class="button is-large  is-success" href="https://play.google.com/store/apps/dev?id=5993489982038468769&hl=en_us">
+                            <span class="icon is-medium">
+                              <i class="fab fa-android"></i>
+                            </span>
+                            <span>Android</span>
+                          </a>
+                    </div>
+                    <div class="column is-2">
+						<a class="button is-large  is-danger is-outlined" href="https://subrata32.pythonanywhere.com">
+                            <span class="icon is-medium">
+                              <i class="fab fa-python"></i>
+                            </span>
+                            <span>Webapp</span>
+                          </a>
+					</div>
+                </div>
+                <div class="columns is-centered">
+					<div class="column is-2">
+						Desktop app
+					</div>
+					<div class="column is-2">
+						NamelessApp
+                    </div>
+                    <div class="column is-2">
+						Webapp
+					</div>
+                </div>
+                </br>
+                <hr>
+                <div class="columns is-centered">
+						<a class="button is-large" href="https://github.com/SubrataSarkar32/tb-and-pneumonia-detection">
+                            <span class="icon is-medium">
+                              <i class="fab fa-github"></i>
+                            </span>
+                            <span>Source Code</span>
+                          </a>
+				</div>
+				
+			</div>
+		</div>
+
+        <!-- Hero footer: will stick at the bottom -->
+        
+    </section>
+    <section id="contact" class="hero is-light">
+            <div class="hero-body">
+                <div class="columns ">
+                    <div class="column is-half is-offset-one-quarter has-text-centered">
+                        <h1 class="title is-3 has-text-centered">
+                            <strong> Let's get in touch </strong>
+                        </h1>
+                        <p class="content is-medium has-text-justified">
+                            Need anything built, want to work together or simply want to have a chat? Drop us an e-mail at
+                            <span class="btn btn-link has-text-info ">
+                                <a href="mailto:pneutakecare@gmail.com " target="_blank" class="highlight-link">pneutakecare@gmail.com</a>
+                            </span> and we will reply to you soon!
+                        </p>
+                        <p> Developers: <a href="https://www.kaggle.com/jerry472">Pratyusha Sinha</a>, <a href="https://subratasarkar32.github.io/" >Subrata Sarkar</a>
+                    </div>
+                </div>
+            </div>
+    </section>
+    <!-- All Other Scripts here -->
+	<script src="https://unpkg.com/typewriter-effect/dist/core.js"></script>
+	<script>
+		// greetings typewriter
+		var app = document.getElementById('hello');
+
+		var typewriter = new Typewriter(app, {
+			loop: true
+		});
+
+		typewriter.typeString('Namaste!!')
+			.pauseFor(2500)
+			.deleteAll()
+			.typeString('Hello!!')
+			.pauseFor(2500)
+			.deleteAll()
+			.typeString('Konnichiwa!!')
+			.pauseFor(2500)
+			.deleteAll()
+			.typeString('Toki!!')
+			.pauseFor(2500)
+			.start();
+
+
+
+
+		// Dynamic age
+		var d = new Date();
+		var n = d.getFullYear();
+		var age = n - 1998 - 1;
+
+		document.getElementById("age").innerHTML = age;
+
+
+		$(document).ready(function() {
+
+			// Check for click events on the navbar burger icon
+			$(".navbar-burger").click(function() {
+
+				// Toggle the "is-active" class on both the "navbar-burger" and the "navbar-menu"
+				$(".navbar-burger").toggleClass("is-active");
+				$(".navbar-menu").toggleClass("is-active");
+
+			});
+		});
+
+		// Navigation JQ
+		$("#homeB").click(function() {
+			$('html,body').animate({
+					scrollTop: $("#home").offset().top
+				},
+				'slow');
+		});
+		$("#skillB").click(function() {
+			$('html,body').animate({
+					scrollTop: $("#skill").offset().top
+				},
+				'slow');
+		});
+
+		$("#workB").click(function() {
+			$('html,body').animate({
+					scrollTop: $("#work").offset().top
+				},
+				'slow');
+		});
+
+
+		$("#lifeB").click(function() {
+			$('html,body').animate({
+					scrollTop: $("#life").offset().top
+				},
+				'slow');
+		});
+
+		$("#contactB").click(function() {
+			$('html,body').animate({
+					scrollTop: $("#contact").offset().top
+				},
+				'slow');
+		});
+	</script>
+
+
+</body>
+
+</html>
