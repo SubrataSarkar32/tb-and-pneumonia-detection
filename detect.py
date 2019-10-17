@@ -34,10 +34,14 @@ def give_prediction(filename=''):
             
             img = cv2.imread(path)
             img = cv2.resize(img, (100, 100))
-            pred = model.predict_classes(img.reshape(-1,100,100,3))
+            if len(img.shape) > 2 and img.shape[2] == 4:
+                      #convert the image from RGBA2RGB
+                      img = cv2.cvtColor(img, cv2.COLOR_BGRA2BGR)
+            pred = model.predict(img.reshape(-1,100,100,3))
+            pred2= [x*100 for x in pred[0]]
             class_label_list = ['TB','normal','pneumonia']
-            #print(class_label_list[pred[0]])
-            return class_label_list[pred[0]]
+            print(pred,pred2)
+            return class_label_list[np.argmax(pred)]
 
 if __name__=="__main__":
     fname=input("Enter file name: ")

@@ -28,7 +28,7 @@ import keras
 
 from keras.models import model_from_json
 #tell our app where our saved model is
-sys.path.append(os.path.abspath("./model"))
+#sys.path.append(os.path.abspath("./model"))
 #from load import *
 #initalize our flask app
 app = Flask(__name__)
@@ -42,13 +42,6 @@ def allowed_file(filename):
     return '.' in filename and \
            filename.rsplit('.', 1)[1].lower() in ['jpg','jpeg','png']
 
-#decoding an image from base64 into raw representation
-def convertImage(imgData1):
-	imgstr = re.search(r'base64,(.*)',imgData1).group(1)
-	#print(imgstr)
-	with open('output.png','wb') as output:
-		output.write(imgstr.decode('base64'))
-
 
 @app.route('/')
 def index():
@@ -58,19 +51,23 @@ def index():
 
 @app.route('/contact/',methods=['GET'])
 def contact():
-	#initModel()
-	#render out pre-built HTML file right on the index page
+	#the contact page
 	return render_template("contact.html")
+
+@app.route('/jsgame/',methods=['GET'])
+def jsgame():
+	#the jsgame page
+	return render_template("jsgame.html")
 
 @app.route('/about/',methods=['GET'])
 def about():
-	#initModel()
-	#render out pre-built HTML file right on the index page
+	#the about page
 	return render_template("about.html")
 
 
 @app.route('/predictly/',methods=['GET','POST'])
 def predictly():
+    #the prediction page
     if request.method == 'POST':
             f = request.files['file']
             if f.filename=='':
