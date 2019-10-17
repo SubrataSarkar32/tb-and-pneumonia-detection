@@ -3,7 +3,7 @@
 
 ## Overview
 
-This is the code for [this](https://youtu.be/f6Bf3gl4hWY) video on Youtube by Siraj Raval. We're going to build a model that recognizes handwritten digit images (MNIST).  Developed using [TensorFlow](https://www.tensorflow.org/) and the super simple [Keras](http://keras.io/) Library. Wrapped into a Webapp using [Flask](http://flask.pocoo.org/) Micro Framework.
+We have designed and trained a convolutional neural network using keras. This will provide people with the required information before contacting the doctor and significantly speed up the process of diagnosis. We take the patient's x-ray image of the chest and then run our model and give the prediction. We have implemented a desktop app ,android app and flask web app.  Developed using [Theano](http://www.deeplearning.net/software/theano/) and the super simple [Keras](http://keras.io/) Library. Wrapped into a Webapp using [Flask](http://flask.pocoo.org/) Micro Framework.
 
 ## Dependencies
 
