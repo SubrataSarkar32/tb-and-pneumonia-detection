@@ -3,7 +3,7 @@
 
 ## Overview
 
-This kernel was made in response to "Dream Big Championship" held by "Internshala". Happy machine learning!
+This kernel was made in response to speed up the diagnosis by technicians. Happy deep learning!
 
 To install dependencies run >pip install -r requirements.txt
 
@@ -49,18 +49,12 @@ We also made a tflite file from the hdf5 file so that in future the predictions 
 
 ## Donation
 
-If my projects helped you save your time. You can give me a cup of coffee. :)
+If our project helped you save your time. You can give us a cup of coffee. :)
 
-You can donate via BHIM UPI
+You can donate via PayPal
 
 
 ![Super sub](https://raw.githubusercontent.com/SubrataSarkar32/subratasarkar32.github.io/master/images/Supersub(200x200).jpg)
 
 
-[![Donate](https://raw.githubusercontent.com/SubrataSarkar32/subratasarkar32.github.io/master/images/bhimupi(100x15).jpg)](upi://pay?pn=Subrata%20Sarakar&pa=9002824700%40upi&tn=Donation&am=&cu=INR&url=http%3A%2F%2Fupi.link%2F)   [Donate](upi://pay?pn=Subrata%20Sarakar&pa=9002824700%40upi&tn=Donation&am=&cu=INR&url=http%3A%2F%2Fupi.link%2F)
-
-
-OR
-
-Scan this QR Code to open your UPI Payment App
-![QR code](https://raw.githubusercontent.com/SubrataSarkar32/subratasarkar32.github.io/master/images/qrpay.png)
+[![Donate](https://www.paypalobjects.com/webstatic/mktg/Logo/pp-logo-100px.png)](https://paypal.me/subratasarkar32)   [Donate](https://paypal.me/subratasarkar32)
