@@ -32,7 +32,7 @@ nbconvert==5.4.1
 nbformat==4.4.0
 networkx==2.2
 notebook
-numpy==1.16.2
+numpy==1.22.0
 opencv-python==3.4.0.14
 pandas==0.25.0
 pbr==5.1.3
